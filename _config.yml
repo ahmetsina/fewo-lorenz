@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: Frisco Template
+title: Ferienwohnung in den Allgäuer Alpen
 url: "https://brave-submarine.cloudvent.net"
 baseurl:
 google_analytics_key:
@@ -10,16 +10,7 @@ disqus_shortname:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: App marketing template for Jekyll.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: Frisco Template
-  links:
-    - https://github.com/CloudCannon/frisco-jekyll-template
-
+description: Diese gemütliche Ferienwohnung, ideal für 2 Personen, befindet sich in der Nähe von Oberstdorf und Sonthofen, mitten in der malerischen Landschaft der Allgäuer Alpen. Die Wohnung bietet ein komfortables Schlafzimmer mit zusätzlicher Schlafmöglichkeit sowie ein gemütliches Wohnzimmer mit Balkon und atemberaubendem Bergblick. Entspannen Sie sich und genießen Sie die Ruhe der Natur, umgeben von Bergen und frischer Alpenluft – ein perfekter Ort für Wanderer und Naturliebhaber.
 # -----
 # Build
 
@@ -106,15 +97,8 @@ defaults:
 
 social_icons:
   - Facebook
-  - Google Plus
   - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
   - Email
-  - RSS
 
 _comments:
   description: Text shown when sharing on social media
