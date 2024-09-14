@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<section class="hero" style="background-image: url(https://source.unsplash.com/MqJX_8EaStM/2000x1322)">
+<section class="hero"
+	style="background-image: url(https://unsplash.com/photos/green-grass-field-near-green-mountains-under-blue-sky-during-daytime-37gZI7RFVos)">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
 			<h1>The latest news</h1>
@@ -13,7 +14,8 @@ layout: default
 
 <section>
 	<div class="text-container">
-		<p class="change-category">You're currently looking at advice categorised under <strong>{{ page.title }}</strong>. <a href="{{ site.baseurl }}/blog/">View all posts</a> instead.</p>
+		<p class="change-category">You're currently looking at advice categorised under <strong>{{ page.title
+				}}</strong>. <a href="{{ site.baseurl }}/blog/">View all posts</a> instead.</p>
 
 		<ul class="blog-posts">
 			{% include list-posts.html posts=page.posts %}
