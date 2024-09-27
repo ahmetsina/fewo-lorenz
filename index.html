@@ -6,7 +6,7 @@ image: "/images/photos/photo2.jpg"
 bottom_image: "/images/photos/photo3.jpg"
 ---
 
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+<section class="hero" style="background-image: url('{{ site.baseurl }}/images/photos/photo1.jpg')">
 	<div class="inner-hero text-container">
 		<div class="hero-text-container">
 			<h1 class="editable">Erleben Sie die Allgäuer Alpen</h1>
@@ -33,7 +33,6 @@ bottom_image: "/images/photos/photo3.jpg"
 			</div>
 		</div>
 	</section>
-
 	<section class="info">
 		<div class="container flex">
 			<div class="text">
@@ -60,8 +59,40 @@ bottom_image: "/images/photos/photo3.jpg"
 			</div>
 		</div>
 	</section>
+	<!-- OpenStreetMap embed -->
+	<section class="info">
+		<div class="container">
+			<h2 class="editable">Unsere Lage</h2>
+		</div>
+		<div class="container flex">
+			<div id="map" style="width: 100%; height: 400px;"></div>
+		</div>
+		<div class="container flex">
+			<div class="button map"><a
+					href="http://maps.apple.com/?ll=47.462551,10.284427&q=Ferienwohnung%20Lorenz&spn=0.000646,0.001353&t=h"
+					target="_blank">Route mit Apple Maps</a></div>
+			<div class="button map"><a href="https://maps.app.goo.gl/De73mrnv79UAiQX4A" target="_blank">Route mit Google
+					Maps</a></div>
+		</div>
+	</section>
 
-	<section class="hero" style="background-image: url({% include relative-src.html src=page.bottom_image %})">
+	<section class="info" id="learn-more">
+		<div class="container">
+			<h2 class="editable">Buchen Sie Jetzt!</h2>
+		</div>
+		<div class="container flex">
+			<div class="image">
+				<iframe src="https://embed.styledcalendar.com/#4LFoW0AMo5ZOaYTeiBHy" title="Styled Calendar"
+					class="styled-calendar-container" style="width: 100%; border: none;"
+					data-cy="calendar-embed-iframe"></iframe>
+				<script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+			</div>
+		</div>
+	</section>
+	<br>
+	<br>
+
+	<!-- <section class="hero" style="background-image: url('{{ site.baseurl }}/images/photos/photo3.jpg')">
 		<div class="inner-hero text-container">
 			<div class="hero-text-container">
 				<h2 class="editable">Buchen Sie Ihre Ferienwohnung jetzt</h2>
@@ -70,5 +101,26 @@ bottom_image: "/images/photos/photo3.jpg"
 				<div class="cta button alt"><a href="#">Jetzt Buchen</a></div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 </div>
+
+<script>
+	function initMap() {
+		var map = L.map('map').setView([47.462542, 10.284362], 13);
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+			attribution: '© OpenStreetMap contributors'
+		}).addTo(map);
+
+		var marker = L.marker([47.462542, 10.284362]).addTo(map);
+		marker.bindPopup("<b>Ferienwohnung</b><br>Lorenz").openPopup();
+	}
+
+	document.addEventListener("DOMContentLoaded", function () {
+		initMap();
+	});
+</script>
+
+<!-- Leaflet.js for OpenStreetMap -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
